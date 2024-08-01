@@ -1,0 +1,11 @@
+#!/bin/sh
+notify-send "\"Q\" to choose wallpaper"
+wallpaper="$(nsxiv -b "$WALLPAPERS" -rot)"
+if [[ $wallpaper ]] then
+    killall swaybg
+    wal -i "$wallpaper" -n
+    waybarBackground &
+    dunstTheme &
+    killall waybar && waybar &
+    swaybg -i "$wallpaper" -m fill
+fi

@@ -1,0 +1,7 @@
+mpd_host = localhost
+mpd_port = 6600
+mpd_music_dir = ~/Music
+startup_screen = "media_library"
+mpd_crossfade_time = 5
+external_editor = nvim
+use_console_editor = yes

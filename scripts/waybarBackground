@@ -1,0 +1,4 @@
+#!/bin/sh
+source ${HOME}/.cache/wal/waybar_background.sh
+sed "s/rgba.*/$background_rgb/" ${HOME}/.config/waybar/style.css -i
+

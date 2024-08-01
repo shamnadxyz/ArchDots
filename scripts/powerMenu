@@ -1,0 +1,7 @@
+#!/bin/sh
+selected="$( echo -e "  Poweroff\n  Reboot\n  Suspend" | wofi -i --dmenu --width 200 --height 185 -s ~/.config/wofi/powermenu.css )"
+case "$selected" in
+"  Poweroff") systemctl poweroff;;
+"  Reboot") systemctl reboot;;
+"  Suspend") systemctl suspend;;
+esac

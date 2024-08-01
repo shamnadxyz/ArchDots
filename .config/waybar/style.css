@@ -1,0 +1,58 @@
+@import url("../../.cache/wal/colors-waybar.css");
+
+* {
+  font-family: JetBrainsMono Nerd Font;
+  font-weight: bold;
+  font-size: 12px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(11,13,18,0.8);
+  color: @foreground;
+  border-radius: 10px;
+}
+
+#workspaces button {
+  color: @color2;
+}
+
+#workspaces button.active {
+  color: @foreground;
+}
+
+#workspaces button.focused {
+  color: @foreground;
+  background: transparent;
+}
+
+#workspaces button.urgent {
+  color: #11111b;
+  background: transparent;
+}
+
+#workspaces button:hover {
+  background: transparent;
+}
+
+#clock,
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#bluetooth,
+#workspaces,
+#tray {
+  background: transparent;
+}
+
+tooltip {
+  background: @background;
+}
+
+#workspaces * {
+  padding: 2px 3px;
+}
+
+#clock {
+  margin-right: 6px;
+}

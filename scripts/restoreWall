@@ -1,2 +1,2 @@
-#!/bin/sh
+#!/bin/bash
 swaybg -i "$(< "${HOME}/.cache/wal/wal")" -m fill

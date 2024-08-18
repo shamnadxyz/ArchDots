@@ -82,8 +82,6 @@ cmd archiveTo7zip ${{
         fi
 }}
 
-map a :push %mkdir<space>
-
 map gd cd ~/.config
 
 # Mapping
@@ -97,4 +95,3 @@ map ax extract
 map ad extractToDir
 map q ;
 map r ;
-

@@ -1,5 +1,5 @@
 * {
-    font-family: "JetBrainsMono Nerd Font";
+    font-family: "Hack Nerd Font";
     font-size: 20px;
     font-weight: bold;
 }
@@ -13,11 +13,6 @@
 
 #outer-box {
 	padding: 5px;
-}
-
-#input {
-	background-color: --wofi-color1;
-	border: 0px solid --wofi-color3;
 }
 
 #scroll {
@@ -43,4 +38,13 @@
 
 #input, #entry:selected {
 	border-radius: 5px;
+}
+#input > image.left {
+  -gtk-icon-transform:scaleX(0);
+}
+
+#input {
+	background-color: --wofi-color1;
+	border: 0px solid --wofi-color3;
+  color: --wofi-color0;
 }

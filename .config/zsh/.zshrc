@@ -10,6 +10,13 @@ SAVEHIST=2000
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
+autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+[[ -n "${key[Up]}"   ]] && bindkey -- "${key[Up]}"   up-line-or-beginning-search
+[[ -n "${key[Down]}" ]] && bindkey -- "${key[Down]}" down-line-or-beginning-search
+
 # Basic auto/tab complete:
 autoload -U compinit && compinit -u
 zstyle ':completion:*' menu select

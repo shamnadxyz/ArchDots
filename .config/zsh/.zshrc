@@ -8,6 +8,7 @@ SAVEHIST=2000
 
 # Starship
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
 
 # Basic auto/tab complete:
 autoload -U compinit && compinit -u

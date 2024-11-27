@@ -1,6 +1,9 @@
 #!/bin/bash
-oldIP="$(grep "androidF" ~/.ssh/config | awk -F "#" '{print $2}')"
+read -p "Name of host: " Host
+oldIP="$(grep "$Host" ~/.ssh/config -A 1 | grep "192.*" --only-matching)"
 [ $oldIP ] || exit 1
-newIP="$(arp -a | grep "gateway" | awk '{print $2}' | sed 's/[()]//g')"
+echo $oldIP
+newIP="$(arp -a | awk '{print $2}' | sed 's/[()]//g')"
+echo $newIP
 [ $newIP ] || exit 1
 sed "s/$oldIP/$newIP/" ~/.ssh/config -i

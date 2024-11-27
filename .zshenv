@@ -6,6 +6,16 @@ export MUSIC_DIR="$HOME/Music"
 export WALLPAPERS="$HOME/Pictures/Wallpapers"
 export GTK_THEME=Materia-dark
 
+export GDK_BACKEND="wayland,x11"
+export MOZ_ENABLE_WAYLAND=1
+
+# Scaling
+# export QT_AUTO_SCREEN_SCALE_FACTOR=0
+# export QT_ENABLE_HIGHDPI_SCALING=0
+# export QT_SCALE_FACTOR=1.25
+# export GDK_SCALE=1.25
+# export GDK_DPI_SCALE=1.25
+
 # Default Apps
 export EDITOR="nvim"
 export VISUAL="nvim"

@@ -1,5 +1,6 @@
 {
   "layer": "top",
+  "reload_style_on_change": true,
   "position": "top",
   "mode": "dock",
   "exclusive": true,
@@ -8,8 +9,8 @@
   ],
   "modules-center": ["clock"],
   "modules-right": [
-    "tray",
     "idle_inhibitor",
+    "tray",
     "network",
     "bluetooth",
     "battery",
@@ -47,13 +48,14 @@
     "format-ethernet": "",
     "tooltip-format": "{ifname} {essid} {signalStrength}%\n{ipaddr} via {gwaddr} ",
     "format-linked": "{ifname} (No IP)",
+    "format-alt": " ",
     "format-disconnected": ""
   },
   "bluetooth": {
     "format": "",
     "format-disabled": "",
-    "format-connected": " {device_alias}",
-    "format-connected-battery": " {device_alias} {device_battery_percentage}%"
+    "format-connected": "",
+    "tooltip-format": "{device_alias} {device_battery_percentage}%",
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -82,7 +84,8 @@
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 1%-"
   },
   "tray": {
-    "icon-size": 14
+    "icon-size": 14,
+    "spacing": 6,
   },
   "battery": {
     "format": "{icon} {capacity}%",
